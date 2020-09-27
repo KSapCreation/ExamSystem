@@ -32,10 +32,11 @@ Partial Class frmExamStudentMapping
         Me.lblSection = New common.Controls.MyLabel()
         Me.RadLabel18 = New common.Controls.MyLabel()
         Me.txtsSection = New common.UserControls.txtFinder()
+        Me.btnDelete = New Telerik.WinControls.UI.RadButton()
         Me.btnClose = New Telerik.WinControls.UI.RadButton()
         Me.RadButton1 = New Telerik.WinControls.UI.RadButton()
         Me.btnGo = New Telerik.WinControls.UI.RadButton()
-        Me.btnDelete = New Telerik.WinControls.UI.RadButton()
+        Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
         CType(Me.SplitPanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -46,10 +47,13 @@ Partial Class frmExamStudentMapping
         CType(Me.gv1.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblSection, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel18, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnDelete, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnClose, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnGo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnDelete, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SplitContainer2.Panel1.SuspendLayout()
+        Me.SplitContainer2.Panel2.SuspendLayout()
+        Me.SplitContainer2.SuspendLayout()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -62,7 +66,7 @@ Partial Class frmExamStudentMapping
         '
         Me.SplitPanel1.RootElement.MinSize = New System.Drawing.Size(25, 25)
         Me.SplitPanel1.Size = New System.Drawing.Size(200, 200)
-        Me.SplitPanel1.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(0.0!, 0.5!)
+        Me.SplitPanel1.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(0!, 0.5!)
         Me.SplitPanel1.SizeInfo.SplitterCorrection = New System.Drawing.Size(0, 98)
         Me.SplitPanel1.TabIndex = 0
         Me.SplitPanel1.TabStop = False
@@ -77,12 +81,7 @@ Partial Class frmExamStudentMapping
         '
         'SplitContainer1.Panel1
         '
-        Me.SplitContainer1.Panel1.Controls.Add(Me.txtDocNo)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Label1)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.RadGroupBox8)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.lblSection)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.RadLabel18)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.txtsSection)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.SplitContainer2)
         '
         'SplitContainer1.Panel2
         '
@@ -97,7 +96,7 @@ Partial Class frmExamStudentMapping
         'txtDocNo
         '
         Me.txtDocNo.FieldName = Nothing
-        Me.txtDocNo.Location = New System.Drawing.Point(125, 16)
+        Me.txtDocNo.Location = New System.Drawing.Point(106, 15)
         Me.txtDocNo.MendatroryField = True
         Me.txtDocNo.MyCharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtDocNo.MyFont = New System.Drawing.Font("Segoe UI", 8.25!)
@@ -113,7 +112,7 @@ Partial Class frmExamStudentMapping
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(29, 19)
+        Me.Label1.Location = New System.Drawing.Point(10, 18)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(78, 13)
         Me.Label1.TabIndex = 341
@@ -124,11 +123,12 @@ Partial Class frmExamStudentMapping
         Me.RadGroupBox8.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBox8.Controls.Add(Me.gv1)
         Me.RadGroupBox8.Controls.Add(Me.Panel1)
+        Me.RadGroupBox8.Dock = System.Windows.Forms.DockStyle.Fill
         Me.RadGroupBox8.HeaderText = "Question"
-        Me.RadGroupBox8.Location = New System.Drawing.Point(28, 65)
+        Me.RadGroupBox8.Location = New System.Drawing.Point(0, 0)
         Me.RadGroupBox8.Name = "RadGroupBox8"
         Me.RadGroupBox8.Padding = New System.Windows.Forms.Padding(10, 20, 10, 10)
-        Me.RadGroupBox8.Size = New System.Drawing.Size(739, 367)
+        Me.RadGroupBox8.Size = New System.Drawing.Size(906, 391)
         Me.RadGroupBox8.TabIndex = 337
         Me.RadGroupBox8.Text = "Question"
         '
@@ -151,7 +151,7 @@ Partial Class frmExamStudentMapping
         Me.gv1.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.gv1.ShowGroupPanel = False
         Me.gv1.ShowHeaderCellButtons = True
-        Me.gv1.Size = New System.Drawing.Size(719, 327)
+        Me.gv1.Size = New System.Drawing.Size(886, 351)
         Me.gv1.TabIndex = 1
         Me.gv1.Text = "RadGridView1"
         '
@@ -160,7 +160,7 @@ Partial Class frmExamStudentMapping
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(10, 20)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(719, 10)
+        Me.Panel1.Size = New System.Drawing.Size(886, 10)
         Me.Panel1.TabIndex = 0
         '
         'lblSection
@@ -169,7 +169,7 @@ Partial Class frmExamStudentMapping
         Me.lblSection.BorderVisible = True
         Me.lblSection.FieldName = Nothing
         Me.lblSection.Font = New System.Drawing.Font("Arial", 8.25!)
-        Me.lblSection.Location = New System.Drawing.Point(399, 40)
+        Me.lblSection.Location = New System.Drawing.Point(380, 39)
         Me.lblSection.Name = "lblSection"
         Me.lblSection.Size = New System.Drawing.Size(362, 18)
         Me.lblSection.TabIndex = 326
@@ -180,7 +180,7 @@ Partial Class frmExamStudentMapping
         '
         Me.RadLabel18.FieldName = Nothing
         Me.RadLabel18.Font = New System.Drawing.Font("Arial", 8.25!)
-        Me.RadLabel18.Location = New System.Drawing.Point(28, 42)
+        Me.RadLabel18.Location = New System.Drawing.Point(9, 41)
         Me.RadLabel18.Name = "RadLabel18"
         Me.RadLabel18.Size = New System.Drawing.Size(79, 16)
         Me.RadLabel18.TabIndex = 327
@@ -197,7 +197,7 @@ Partial Class frmExamStudentMapping
         Me.txtsSection.IsSourceFromTable = False
         Me.txtsSection.IsSourceFromValueList = False
         Me.txtsSection.IsUnique = False
-        Me.txtsSection.Location = New System.Drawing.Point(125, 40)
+        Me.txtsSection.Location = New System.Drawing.Point(106, 39)
         Me.txtsSection.MendatroryField = False
         Me.txtsSection.MyFont = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtsSection.MyLinkLable1 = Me.RadLabel18
@@ -211,6 +211,16 @@ Partial Class frmExamStudentMapping
         Me.txtsSection.Size = New System.Drawing.Size(264, 19)
         Me.txtsSection.TabIndex = 325
         Me.txtsSection.Value = ""
+        '
+        'btnDelete
+        '
+        Me.btnDelete.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnDelete.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDelete.Location = New System.Drawing.Point(170, 3)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(71, 22)
+        Me.btnDelete.TabIndex = 339
+        Me.btnDelete.Text = "Delete"
         '
         'btnClose
         '
@@ -242,15 +252,29 @@ Partial Class frmExamStudentMapping
         Me.btnGo.TabIndex = 338
         Me.btnGo.Text = "Save"
         '
-        'btnDelete
+        'SplitContainer2
         '
-        Me.btnDelete.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnDelete.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDelete.Location = New System.Drawing.Point(170, 3)
-        Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(71, 22)
-        Me.btnDelete.TabIndex = 339
-        Me.btnDelete.Text = "Delete"
+        Me.SplitContainer2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SplitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
+        Me.SplitContainer2.IsSplitterFixed = True
+        Me.SplitContainer2.Location = New System.Drawing.Point(0, 0)
+        Me.SplitContainer2.Name = "SplitContainer2"
+        Me.SplitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal
+        '
+        'SplitContainer2.Panel1
+        '
+        Me.SplitContainer2.Panel1.Controls.Add(Me.txtDocNo)
+        Me.SplitContainer2.Panel1.Controls.Add(Me.txtsSection)
+        Me.SplitContainer2.Panel1.Controls.Add(Me.Label1)
+        Me.SplitContainer2.Panel1.Controls.Add(Me.RadLabel18)
+        Me.SplitContainer2.Panel1.Controls.Add(Me.lblSection)
+        '
+        'SplitContainer2.Panel2
+        '
+        Me.SplitContainer2.Panel2.Controls.Add(Me.RadGroupBox8)
+        Me.SplitContainer2.Size = New System.Drawing.Size(906, 474)
+        Me.SplitContainer2.SplitterDistance = 79
+        Me.SplitContainer2.TabIndex = 342
         '
         'frmExamStudentMapping
         '
@@ -266,7 +290,6 @@ Partial Class frmExamStudentMapping
         Me.Text = "Exam Student Mapping"
         CType(Me.SplitPanel1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.Panel1.ResumeLayout(False)
-        Me.SplitContainer1.Panel1.PerformLayout()
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         Me.SplitContainer1.ResumeLayout(False)
         CType(Me.RadGroupBox8, System.ComponentModel.ISupportInitialize).EndInit()
@@ -275,10 +298,14 @@ Partial Class frmExamStudentMapping
         CType(Me.gv1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblSection, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel18, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnDelete, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnClose, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnGo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnDelete, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SplitContainer2.Panel1.ResumeLayout(False)
+        Me.SplitContainer2.Panel1.PerformLayout()
+        Me.SplitContainer2.Panel2.ResumeLayout(False)
+        Me.SplitContainer2.ResumeLayout(False)
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -297,5 +324,6 @@ Partial Class frmExamStudentMapping
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents gv1 As common.UserControls.MyRadGridView
     Friend WithEvents btnDelete As Telerik.WinControls.UI.RadButton
+    Friend WithEvents SplitContainer2 As SplitContainer
 End Class
 

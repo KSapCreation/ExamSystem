@@ -13,7 +13,7 @@ Public Class RptStudnetHistory
         Dim Query As String = ""
         Dim dt As DataTable
 
-        Query = " select fbnpc_login_history.UserCode as [Student Code],fbnpc_login_history.UserName as [Student Name],fbnpc_user_master.Phone,fbnpc_login_history.ip_address as [IP Address],fbnpc_login_history.Macaddress as [Mac Address],fbnpc_login_history.logindate as [Login Date with Time]
+        Query = " select fbnpc_login_history.UserCode as [Student Code],fbnpc_login_history.UserName as [Student Name],fbnpc_user_master.Phone,fbnpc_login_history.ip_address as [IP Address],fbnpc_login_history.Macaddress as [Mac Address],fbnpc_login_history.logindate as [Login Date with Time] "
         Query += " from fbnpc_login_history"
         Query += " left outer join fbnpc_user_master on fbnpc_user_master.user_code=fbnpc_login_history.usercode"
         Query += " left outer join fbnpc_user_master as emailUSer on emailUSer.e_mail=fbnpc_login_history.usercode "

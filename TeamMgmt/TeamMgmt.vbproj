@@ -670,6 +670,7 @@
     <None Include="Resources\Comp_logo.png" />
     <None Include="Resources\BI1.jpg" />
     <None Include="Resources\B11.png" />
+    <Content Include="Resources\B12Old.png" />
     <Content Include="Resources\Logo_fbnpc_new.png" />
     <None Include="Resources\B12.png" />
   </ItemGroup>

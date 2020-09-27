@@ -25,7 +25,7 @@ Partial Class MDI
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim CarouselEllipsePath1 As Telerik.WinControls.UI.CarouselEllipsePath = New Telerik.WinControls.UI.CarouselEllipsePath()
+        Dim CarouselEllipsePath2 As Telerik.WinControls.UI.CarouselEllipsePath = New Telerik.WinControls.UI.CarouselEllipsePath()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MDI))
         Me.RadStatusStrip1 = New Telerik.WinControls.UI.RadStatusStrip()
         Me.RadSplitButton1 = New Telerik.WinControls.UI.RadSplitButton()
@@ -693,13 +693,13 @@ Partial Class MDI
         Me.RadCarousel1.AutoScroll = True
         Me.RadCarousel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.RadCarousel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        CarouselEllipsePath1.Center = New Telerik.WinControls.UI.Point3D(50.0R, 50.0R, 0.0R)
-        CarouselEllipsePath1.FinalAngle = -100.0R
-        CarouselEllipsePath1.InitialAngle = -90.0R
-        CarouselEllipsePath1.U = New Telerik.WinControls.UI.Point3D(-20.0R, -17.0R, -50.0R)
-        CarouselEllipsePath1.V = New Telerik.WinControls.UI.Point3D(30.0R, -25.0R, -60.0R)
-        CarouselEllipsePath1.ZScale = 500.0R
-        Me.RadCarousel1.CarouselPath = CarouselEllipsePath1
+        CarouselEllipsePath2.Center = New Telerik.WinControls.UI.Point3D(50.0R, 50.0R, 0R)
+        CarouselEllipsePath2.FinalAngle = -100.0R
+        CarouselEllipsePath2.InitialAngle = -90.0R
+        CarouselEllipsePath2.U = New Telerik.WinControls.UI.Point3D(-20.0R, -17.0R, -50.0R)
+        CarouselEllipsePath2.V = New Telerik.WinControls.UI.Point3D(30.0R, -25.0R, -60.0R)
+        CarouselEllipsePath2.ZScale = 500.0R
+        Me.RadCarousel1.CarouselPath = CarouselEllipsePath2
         Me.RadCarousel1.Controls.Add(Me.llblLogin)
         Me.RadCarousel1.Controls.Add(Me.MyLabel2)
         Me.RadCarousel1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -1002,7 +1002,7 @@ Partial Class MDI
         '
         Me.SplitPanel1.RootElement.MinSize = New System.Drawing.Size(0, 0)
         Me.SplitPanel1.Size = New System.Drawing.Size(526, 444)
-        Me.SplitPanel1.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(-0.0002246182!, 0.0!)
+        Me.SplitPanel1.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(-0.0002246182!, 0!)
         Me.SplitPanel1.TabIndex = 0
         Me.SplitPanel1.TabStop = False
         Me.SplitPanel1.Text = "SplitPanel1"
@@ -1032,7 +1032,7 @@ Partial Class MDI
         '
         Me.SplitPanel2.RootElement.MinSize = New System.Drawing.Size(0, 0)
         Me.SplitPanel2.Size = New System.Drawing.Size(527, 444)
-        Me.SplitPanel2.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(-0.0002246182!, 0.0!)
+        Me.SplitPanel2.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(-0.0002246182!, 0!)
         Me.SplitPanel2.TabIndex = 1
         Me.SplitPanel2.TabStop = False
         Me.SplitPanel2.Text = "SplitPanel2"
@@ -1202,7 +1202,7 @@ Partial Class MDI
         '
         Me.SplitPanel3.RootElement.MinSize = New System.Drawing.Size(0, 0)
         Me.SplitPanel3.Size = New System.Drawing.Size(351, 444)
-        Me.SplitPanel3.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(-0.1008535!, 0.0!)
+        Me.SplitPanel3.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(-0.1008535!, 0!)
         Me.SplitPanel3.SizeInfo.SplitterCorrection = New System.Drawing.Size(-112, 0)
         Me.SplitPanel3.TabIndex = 2
         Me.SplitPanel3.TabStop = False
@@ -1225,7 +1225,7 @@ Partial Class MDI
         '
         Me.SplitPanel4.RootElement.MinSize = New System.Drawing.Size(0, 0)
         Me.SplitPanel4.Size = New System.Drawing.Size(367, 444)
-        Me.SplitPanel4.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(0.1013028!, 0.0!)
+        Me.SplitPanel4.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(0.1013028!, 0!)
         Me.SplitPanel4.SizeInfo.SplitterCorrection = New System.Drawing.Size(112, 0)
         Me.SplitPanel4.TabIndex = 3
         Me.SplitPanel4.TabStop = False

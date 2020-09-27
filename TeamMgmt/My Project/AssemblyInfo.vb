@@ -8,8 +8,8 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("Exam ERP")> 
-<Assembly: AssemblyDescription("23-10-2018")> 
+<Assembly: AssemblyTitle("Exam ERP")>
+<Assembly: AssemblyDescription("25-09-2020")>
 <Assembly: AssemblyCompany("KSap Creation")> 
 <Assembly: AssemblyProduct("TeamMgmt")> 
 <Assembly: AssemblyCopyright("Copyright © KSap Creation 2018")> 
@@ -18,7 +18,7 @@ Imports System.Runtime.InteropServices
 <Assembly: ComVisible(False)>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("32e67564-78a1-470f-8bee-c51004fc2b66")> 
+<Assembly: Guid("32e67564-78a1-470f-8bee-c51004fc2b66")>
 
 ' Version information for an assembly consists of the following four values:
 '
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("1.0.0.13")> 
-<Assembly: AssemblyFileVersion("1.0.0.13")> 
+<Assembly: AssemblyVersion("1.0.0.15")>
+<Assembly: AssemblyFileVersion("1.0.0.15")>
